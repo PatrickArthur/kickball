@@ -1,0 +1,32 @@
+<title>Leaderboard</title>
+
+<h3>Scores</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Team Name</th>
+      <th>Wins</th>
+       <th>Losses</th>
+       <th>Ties</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+
+
+    <% @data.each do |team| %>
+      <tr>
+        <td><a href="<%= "/teams/#{team[:team_name]}" %>"><%= team[:team_name] %></a></td>
+        <td><%= team[:wins] %></td>
+        <td><%= team[:losses] %></td>
+        <td><%= team[:ties] %></td>
+
+      </tr>
+    <% end %>
+
+
+  </tbody>
+
+</table>

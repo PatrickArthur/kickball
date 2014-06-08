@@ -1,0 +1,59 @@
+<h3><%= @team[:team_name] %></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Wins</th>
+       <th>Losses</th>
+       <th>Ties</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+        <td><%= @team[:wins] %></td>
+        <td><%= @team[:losses] %></td>
+        <td><%= @team[:ties] %></td>
+      </tr>
+  </tbody>
+
+
+   <thead>
+    <tr>
+      <th>Home Team</th>
+      <th>Away Team</th>
+       <th>Home Score</th>
+       <th>Away Score</th>
+    </tr>
+  </thead>
+
+    <tbody>
+    <tr>
+      <% @hometeams.each do |hometeam| %>
+        <tr>
+          <td><%= hometeam[:homeopponent] %></td>
+          <td><%= hometeam[:awayopponent] %></td>
+          <td><%= hometeam[:homescore] %></td>
+          <td><%= hometeam[:awayscore] %></td>
+        </tr>
+        <% end %>
+      </tr>
+  </tbody>
+
+    <tbody>
+    <tr>
+      <% @awayteams.each do |awayteam| %>
+        <tr>
+          <td><%= awayteam[:homeopponent] %></td>
+          <td><%= awayteam[:awayopponent] %></td>
+          <td><%= awayteam[:homescore] %></td>
+          <td><%= awayteam[:awayscore] %></td>
+        </tr>
+        <% end %>
+      </tr>
+  </tbody>
+
+
+
+
+</table>
